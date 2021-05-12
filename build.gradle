@@ -28,6 +28,10 @@ allprojects {
         maven {
             url "https://dl.bintray.com/hbdevmdm/maven"
         }
+        maven {
+            url "https://jitpack.io"
+            credentials { username jp_og8o0p8t4hdjb5mqm09l427lnl }
+        }
         jcenter()
     }
     tasks.withType(Javadoc).all {
