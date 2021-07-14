@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorPrimary"
+        android:dividerPadding="5dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:showDividers="middle|beginning|end">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRequestUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRequestMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRequestParameter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRequestHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRequestTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResponseBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResponseContentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResponseStatusCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResponseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            tools:text="Url Here" />
+    </LinearLayout>
+</layout>
