@@ -30,7 +30,7 @@ Grab via Maven:
 ```
 or Gradle:
 ```groovy
-implementation 'com.hb.retroapi:retroapi:1.4'
+implementation 'com.github.hbdevmdm:RetroAPI:2.0'
 ```
 RootProject > build.gradle
 
