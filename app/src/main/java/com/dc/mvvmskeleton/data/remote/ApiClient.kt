@@ -8,6 +8,7 @@ import com.dc.retroapi.interceptor.ResponseInterceptor
 
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
@@ -17,8 +18,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiClient {
     companion object {
-        private const val BASE_URL = "http://18.138.121.247/WS/"
+        /*private const val BASE_URL = "http://18.138.121.247/WS/"*/
+        private const val BASE_URL = "https://staging.zury.in/"
         val apiService: ApiService by lazy {
+
+
             return@lazy RetrofitClientBuilder()
                     .baseUrl(BASE_URL)
                     .connectionTimeout(30)
@@ -29,7 +33,9 @@ class ApiClient {
                         }
 
                         override fun provideHeaderMap(): HashMap<String, String> {
-                            return HashMap()
+                            val headerHashMap=HashMap<String,String>()
+                            headerHashMap["Authorization"] = "Token " + "97de2d3402389048166975e68dce700292105c85" //Mehulbhai
+                            return headerHashMap
                         }
 
                         override fun removeFromBody(): ArrayList<String> {
@@ -37,14 +43,14 @@ class ApiClient {
                         }
                     }))
                     .addLogInterceptor(HttpLoggingInterceptor.Level.BODY)
-                    .addInterceptor(ResponseInterceptor(object : ResponseInterceptor.OnResponseCallback {
+                   /* .addInterceptor(ResponseInterceptor(object : ResponseInterceptor.OnResponseCallback {
                         override fun onNetworkResponse(response: Response) {
 
                         }
-                    }))
-                    .addEncryptionInterceptor("CIT@WS!", EncryptionStrategy.REQUEST_RESPONSE,
+                    }))*/
+                    /*.addEncryptionInterceptor("CIT@WS!", EncryptionStrategy.REQUEST_RESPONSE,
                             true, "ws_checksum",false,
-                            excludeFromEncryption = arrayListOf("ws_token"))
+                            excludeFromEncryption = arrayListOf("ws_token"))*/
                     .addConverterFactory(GsonConverterFactory.create())
                     .create(ApiService::class.java)
         }

@@ -95,6 +95,9 @@ class RequestInterceptor(private val onRequestInterceptor: OnRequestInterceptor)
                         }
                         newBody = newBodyBuilder.build()
                     }
+                    request.body is RequestBody -> {
+                        newBody = requestBody
+                    }
                     else -> {
                         val newBodyBuilder = FormBody.Builder()
                         bodyMap.asIterable().forEach {
