@@ -47,7 +47,8 @@ class DashboardActivity : AppCompatActivity() {
         json.addProperty("calories_burnt",1500)
         json.addProperty("effort_level",2)
         json.addProperty("input_date","2021-12-14")
-        ApiClient.apiService.addUserActivityLogX( json).enqueue(object:Callback<String>{
+        val act=Activity()
+        ApiClient.apiService.addUserActivityLogX( act).enqueue(object:Callback<String>{
             override fun onResponse(call: Call<String>, response: Response<String>) {
 
             }

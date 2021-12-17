@@ -40,6 +40,6 @@ public interface ApiService {
 
 
     @POST("core/api/coach/userapp/activity/create-user-fit-log")
-    fun addUserActivityLogX(@Body json: JsonObject): Call<String>
+    fun addUserActivityLogX(@Body json: Activity): Call<String>
 
 }
